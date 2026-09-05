@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080b12;
+  color: white;
+}
+
+.app {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.money {
+  background: #171d29;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: #ffd84d;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+.card,
+.profile-card {
+  background: #111722;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,.35);
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.profile-mini {
+  background: #181f2c;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px 0;
+  line-height: 2;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  margin: 6px 0;
+  background: #273247;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111722;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.topbar button {
+  width: auto;
+  margin: 0;
+  padding: 8px 12px;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-around;
+  background: #111722;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.equipment {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.equipment > div {
+  width: 50%;
+  background: #151c28;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.battle {
+  height: 330px;
+  margin-top: 10px;
+  background: radial-gradient(circle, #18243a, #080b12);
+  border: 2px solid #202a3b;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.target {
+  position: absolute;
+  font-size: 65px;
+  cursor: pointer;
+  transition: .15s;
+  user-select: none;
+}
+
+.explosion {
+  position: absolute;
+  display: none;
+  font-size: 70px;
+  pointer-events: none;
+}
+
+.attack-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.attack-buttons button {
+  width: 50%;
+}
+
+.message {
+  text-align: center;
+  min-height: 30px;
+  padding: 8px;
+  color: #b9c7dc;
+}
+
+.shop-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shop-header button {
+  width: auto;
+  padding: 8px 12px;
+}
+
+.shop-header h2 {
+  margin: 0;
+}
+
+h3 {
+  margin-top: 25px;
+}
+
+.shop-item {
+  background: #111722;
+  border-radius: 15px;
+  padding: 14px;
+  margin: 9px 0;
+}
+
+.shop-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-item-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.price {
+  color: #ffd84d;
+}
+
+.shop-item-info {
+  color: #aebbd0;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.shop-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.shop-buttons button {
+  font-size: 13px;
+  padding: 10px 5px;
+}
+
+.equipped {
+  border: 1px solid #4caf50;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.avatar {
+  font-size: 65px;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  background: #171e2b;
+  padding: 12px;
+  margin: 7px 0;
+  border-radius: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #293346;
+  margin: 18px 0;
+}
+
+@keyframes boom {
+  0% {
+    transform: scale(.4);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.explode-animation {
+  animation: boom .4s forwards;
+  }
